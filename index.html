@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <title>Doctors cards</title>
+    <link rel="stylesheet" href="build/css/vendor.css">
+    <link rel="stylesheet" href="build/css/style.css">
+</head>
+<body id="body">
+<div class="creationContainer">
+    <img class="logo" src="hospital-logo-design-png-55.png" alt="">
+    <button class="button" type="button" onclick="openModal()">New Visit</button>
+</div>
+<div class="modal">
+    <form class="formWithValidation">
+    <button class="close" onclick="closeModal()">X</button>
+    <label class="slelectLab" for="doctorType">Doctors</label><br>
+    <select id="doctorType"
+            onchange="onDoctorSelect(event)"
+            name="doctorType">
+        <option  value="0" class="prime" selected>--Please select a doctor--</option>
+        <option  value="Cardiologist" class="prime" >--Cardiologist--</option>
+        <option  value="Dentist" class="prime" >--Dentist--</option>
+        <option  value="Therapist" class="prime" >--Therapist--</option>
+    </select>
+    <div id="fieldsWrapper">
+    </div>
+    <button id ='btn' type="button" class="create" onclick="onSubmitClick(event)" value="Create Visit">Create Visit</button>
+    </form>
+</div>
+<div class="itemContainer"><img  class="img" src="child_in_bed44.jpg" alt="Doctor with a child"><span class="title">No items have been added</span>
+    <div class="wrapperCard"></div>
+</div>
+<script src="build/js/vendor.js"></script>
+<script src="build/js/scripts.js"></script>
+</body>
+</html>
